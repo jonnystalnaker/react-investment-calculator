@@ -4,14 +4,8 @@
 // - annualInvestment: The amount invested every year
 // - expectedReturn: The expected (annual) rate of return
 // - duration: The investment duration (time frame)
-export function calculateInvestmentResults({
-  initialInvestment,
-  annualInvestment,
-  expectedReturn,
-  duration,
-}, results) {
+export function calculateInvestmentResults({ initialInvestment, annualInvestment, expectedReturn, duration }, results) {
   let investmentValue = initialInvestment;
-
   for (let i = 0; i < duration; i++) {
     const interestEarnedInYear = investmentValue * (expectedReturn / 100);
     investmentValue += interestEarnedInYear + annualInvestment;
